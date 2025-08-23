@@ -1,8 +1,13 @@
 import pandas as pd
 import os
 
+# Cambiar cwd a la carpeta donde está el script
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+print("Directorio de trabajo:", os.getcwd())
 from IPython.display import display
+print(os.getcwd())
 csv_path = 'result_retrieve_left-and-right_x_50_2016_modified.csv'
+
 parquet_path = 'result_retrieve_left-and-right_x_50_2016_modified.parquet'
 # --- Load the modified files ---
 print("Loading modified files into new DataFrames...")
